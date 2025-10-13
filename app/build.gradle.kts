@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    application
     id("com.github.ben-manes.versions") version "0.41.0"
 }
 
@@ -10,6 +11,10 @@ repositories {
     mavenCentral()
 }
 
+application {
+    // Входная точка
+    mainClass.set("hexlet.code.App")
+}
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
